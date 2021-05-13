@@ -62,7 +62,10 @@ class Game{
                         
                          
                      }
-                    
+                     textSize(30);
+                     fill("white");
+                     text("Player1 :"+allPlayers.player1.score,200,200);
+                     text("Player2 :"+allPlayers.player2.score,200,300);
                       
                  
                  }
@@ -103,7 +106,8 @@ class Game{
                     for (var i = 0; i < fruitGroup.length; i++) {
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
-                         
+                            player.score=player.score+1;
+                          player.update();
                             
                         }
                         
